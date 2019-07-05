@@ -150,3 +150,9 @@ Check access log as follows `tail -f /var/log/nginx/nginx_access.log`
 
 ![alt text](https://github.com/xxfroxx/nginx_forward_proxy/blob/master/Screenshot%20from%202019-07-05%2003-40-15.png)
 
+# Source for this solution
+
+https://www.udemy.com
+https://github.com/chobits/ngx_http_proxy_connect_module
+https://github.com/reiz/nginx_proxy
+https://hub.docker.com/r/reiz/nginx_proxy
