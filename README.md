@@ -101,7 +101,7 @@ server {                                # Virtual Host for forward proxy
   }
 
 ```
-Log configuration and breakdown:
+Log configuration:
 
 ```
 http {
