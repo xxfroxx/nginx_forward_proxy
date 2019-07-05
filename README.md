@@ -114,6 +114,19 @@ http {
 
 ```
 
+Log entry breakdown:
+
+`127.0.0.1 "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 200 "60.070" "HTTP/1.1"`
+
+
+```
+remote_addr=                127.0.0.1 
+request=                    "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 
+status=                     200 
+request_time (miliseconds)= "60.070" 
+server_protocol=            "HTTP/1.1"
+```
+
 As per question #3
 
 ```
@@ -131,6 +144,8 @@ server {
 # Testing the forward proxy
 
 Configure a http proxy in your browser as indicated in the image below, bear in mind that there are just few sites that you can use, those "white listed".
+
+Check access log as follows `tail -f /var/log/nginx/nginx_access.log`
 
 
 ![alt text](https://github.com/xxfroxx/nginx_forward_proxy/blob/master/Screenshot%20from%202019-07-05%2003-40-15.png)
