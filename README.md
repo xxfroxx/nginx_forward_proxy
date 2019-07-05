@@ -14,12 +14,21 @@ and redirect requests for https://domain.com/resource2 to 20.20.20.20.
 
 2) A forward proxy capability in Nginx that can handle a CONNECT request, requires the addition of a separate module, for this case the following module will do the job: ngx_http_proxy_connect_module.
 
+# Download and unzip proxy_connect module
+
+
+```
+git clone https://github.com/chobits/ngx_http_proxy_connect_module.git
+```
+
 # Building Nginx from source to accomplish this task:
 
 ```
 wget http://nginx.org/download/nginx-1.16.0.tar.gz 
 tar -zxvf nginx-1.16.0.tar.gz 
 cd nginx-1.16.0.tar.gz
+sudo patch -p1 < /tmp/ngx_http_proxy_connect_module-master/patch/proxy_connect_rewrite_101504.patch
+# Module downloded on the step above 
 ./configure --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --error-log-path=/var/log/nginx/nginx_error.log --http-log-path=/var/log/nginx/nginx_access.log --pid-path=/var/run/nginx.pid --with-http_ssl_module --add-module=/tmp/ngx_http_proxy_connect_module-master
 
 sudo make && sudo make install
