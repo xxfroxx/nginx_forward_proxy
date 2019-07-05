@@ -128,4 +128,10 @@ server {
 
 ```
 
+# Testing the forward proxy
+
+Configure a http proxy in your browser as indicated in the image below, bear in mind that there are just few sites that you can use, those "white listed".
+
+
+
 
