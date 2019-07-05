@@ -133,5 +133,5 @@ server {
 Configure a http proxy in your browser as indicated in the image below, bear in mind that there are just few sites that you can use, those "white listed".
 
 
-
+![alt text](https://github.com/xxfroxx/nginx_forward_proxy/blob/master/Screenshot%20from%202019-07-05%2003-40-15.pn(
 
